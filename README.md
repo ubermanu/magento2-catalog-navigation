@@ -12,10 +12,12 @@ _Tested on Magento 2.4 (with Blank theme)._
 
 ### Catalog toolbar
 
-_The catalog toolbar is now asynchronous_.\
+_The catalog toolbar is now asynchronous_.
+
 You can change the number of products per page, the sort order, the sort direction and the page number without reloading the page.
 
 ### Customer dashboard
 
-_The customer dashboard is now asynchronous._\
+_The customer dashboard is now asynchronous._
+
 You can now navigate through your orders, invoices and reviews without reloading the page.
