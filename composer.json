@@ -1,0 +1,22 @@
+{
+    "name": "ubermanu/magento2-navigation-async",
+    "description": "Asynchronous navigation in your Magento 2 store",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emmanuel Vodor",
+            "email": "manu@paca.happy-dev.fr"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ubermanu\\NavigationAsync\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
