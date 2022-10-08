@@ -4,10 +4,6 @@ define([
 ], function ($, arrosoir) {
 
     var mixin = {
-        options: {
-            productListSelector: '.product-items'
-        },
-
         changeUrl: function (paramName, paramValue, defaultValue) {
             if (this.options.post) {
                 // TODO: Add support for post req
@@ -37,9 +33,14 @@ define([
             }
 
             paramData = $.param(paramData);
-            // location.href = baseUrl + (paramData.length ? '?' + paramData : '');
+            var url = baseUrl + (paramData.length ? '?' + paramData : '');
 
-            arrosoir.hydrate()
+            $('body').trigger('processStart');
+
+            arrosoir.hydrate('#maincontent', url, { history: true }).then(function () {
+                $('#maincontent').trigger('contentUpdated');
+                $('body').trigger('processStop');
+            });
         }
     }
 
