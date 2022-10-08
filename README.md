@@ -12,18 +12,16 @@ _Tested on Magento 2.4 (with Blank theme)._
 
 ### Pager
 
-_The pager is now asynchronous._
-
 You can navigate through the pages without reloading the page.
 
 ### Catalog toolbar
 
-_The catalog toolbar is now asynchronous_.
-
 You can change the number of products per page, the sort order, the sort direction and the page number without reloading the page.
 
-### Customer dashboard
+### Layered navigation
 
-_The customer dashboard is now asynchronous._
+You can change the filters without reloading the page.
+
+### Customer dashboard
 
 You can now navigate through your orders, invoices and reviews without reloading the page.
