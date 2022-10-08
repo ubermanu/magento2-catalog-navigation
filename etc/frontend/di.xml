@@ -6,4 +6,10 @@
     <type name="Magento\Theme\Block\Html\Pager">
         <plugin name="navigation_async_pager_links_plugin" type="Ubermanu\NavigationAsync\Plugin\PagerLinks"/>
     </type>
+
+    <!-- Append a script to make links async -->
+    <type name="Magento\LayeredNavigation\Block\Navigation">
+        <plugin name="navigation_async_layered_navigation_links_plugin"
+                type="Ubermanu\NavigationAsync\Plugin\LayeredNavigationLinks"/>
+    </type>
 </config>
