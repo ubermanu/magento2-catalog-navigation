@@ -18,6 +18,10 @@ You can navigate through the pages without reloading the page.
 
 You can change the number of products per page, the sort order, the sort direction and the page number without reloading the page.
 
+### Catalog filters
+
+You can change the filters without reloading the page.
+
 ### Layered navigation
 
 You can change the filters without reloading the page.
