@@ -1,9 +1,13 @@
 define([
     'jquery',
-    'arrosoir'
-], function ($, arrosoir) {
+    'Ubermanu_NavigationAsync/js/hydrate',
+], function ($, hydrate) {
 
     var mixin = {
+        /**
+         * When updating a value in the toolbar, update the #maincontent with XHR.
+         * @inheritDoc
+         */
         changeUrl: function (paramName, paramValue, defaultValue) {
             if (this.options.post) {
                 // TODO: Add support for post req
@@ -35,12 +39,8 @@ define([
             paramData = $.param(paramData);
             var url = baseUrl + (paramData.length ? '?' + paramData : '');
 
-            $('body').trigger('processStart');
-
-            arrosoir.hydrate('#maincontent', url, { history: true }).then(function () {
-                $('#maincontent').trigger('contentUpdated');
-                $('body').trigger('processStop');
-            });
+            // Update #maincontent and push history
+            hydrate(url, { history: true });
         }
     }
 
