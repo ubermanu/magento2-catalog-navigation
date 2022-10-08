@@ -1,7 +1,8 @@
 define([
     'jquery',
-    'Ubermanu_NavigationAsync/js/hydrate',
+    'Ubermanu_NavigationAsync/js/hydrate'
 ], function ($, hydrate) {
+    'use strict';
 
     var mixin = {
         /**
