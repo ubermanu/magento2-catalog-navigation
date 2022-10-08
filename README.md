@@ -2,7 +2,7 @@
 
 This module allows you to navigate through your Magento 2 website without reloading the page.
 
-<small>Tested on Magento 2.4 (with Blank theme).</small>
+_Tested on Magento 2.4 (with Blank theme)._
 
 ## Install
 
