@@ -19,7 +19,8 @@ define([
     return function (url, options = {}) {
         options = $.extend({}, defaultOptions, options);
 
-        $('body').trigger('processStart');
+        // Preserve the original URL, so we can use it in the history
+        const origUrl = url;
 
         // Add the `isContent` GET param to the url
         if (options.contentOnly) {
@@ -28,9 +29,19 @@ define([
             url = params.apply(url);
         }
 
-        arrosoir.hydrate('#maincontent', url, options).then(function () {
+        $('body').trigger('processStart');
+
+        // Force the history option to false and manually do it on callback
+        // Since we might have the `isContent` GET param, we don't want to push it to the history
+        const hydrateOptions = $.extend({}, options, { history: false });
+
+        arrosoir.hydrate('#maincontent', url, hydrateOptions).then(function () {
             $('#maincontent').trigger('contentUpdated');
             $('body').trigger('processStop');
+
+            if (options.history) {
+                history.pushState({}, '', origUrl);
+            }
         });
     }
 });
