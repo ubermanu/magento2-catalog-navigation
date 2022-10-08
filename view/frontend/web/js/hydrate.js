@@ -25,7 +25,7 @@ define([
         if (options.contentOnly) {
             const params = arrosoir.params(url);
             params.isContent = true;
-            return params.apply(url);
+            url = params.apply(url);
         }
 
         arrosoir.hydrate('#maincontent', url, options).then(function () {
