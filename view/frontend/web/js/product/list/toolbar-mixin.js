@@ -4,7 +4,7 @@ define([
 ], function ($, hydrate) {
     'use strict';
 
-    var mixin = {
+    const mixin = {
         /**
          * When updating a value in the toolbar, update the #maincontent with XHR.
          * @inheritDoc
@@ -15,7 +15,7 @@ define([
                 // return this._super(paramName, paramValue, defaultValue);
             }
 
-            var urlPaths = this.options.url.split('?'),
+            let urlPaths = this.options.url.split('?'),
                 baseUrl = urlPaths[0],
                 paramData = this.getUrlParams(),
                 currentPage = this.getCurrentPage(),
@@ -38,7 +38,7 @@ define([
             }
 
             paramData = $.param(paramData);
-            var url = baseUrl + (paramData.length ? '?' + paramData : '');
+            const url = baseUrl + (paramData.length ? '?' + paramData : '');
 
             // Update #maincontent and push history
             hydrate(url, { history: true });
