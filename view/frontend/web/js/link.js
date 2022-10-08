@@ -22,7 +22,7 @@ define([
                 && !url.startsWith('tel:')
                 && !url.startsWith('javascript:')
                 && !url.startsWith('data:')) {
-                hydrate(this.href, config);
+                hydrate(url, config);
             }
         });
     }
