@@ -4,6 +4,7 @@
     <module name="Ubermanu_NavigationAsync">
         <sequence>
             <module name="Magento_Catalog"/>
+            <module name="Magento_Theme"/>
         </sequence>
     </module>
 </config>

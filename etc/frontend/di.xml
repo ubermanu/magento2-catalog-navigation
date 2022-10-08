@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Append a script to make links async -->
+    <type name="Magento\Theme\Block\Html\Pager">
+        <plugin name="navigation_async_pager_links_plugin" type="Ubermanu\NavigationAsync\Plugin\PagerLinks"/>
+    </type>
+</config>

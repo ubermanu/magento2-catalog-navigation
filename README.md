@@ -10,6 +10,12 @@ _Tested on Magento 2.4 (with Blank theme)._
 
 ## Features
 
+### Pager
+
+_The pager is now asynchronous._
+
+You can navigate through the pages without reloading the page.
+
 ### Catalog toolbar
 
 _The catalog toolbar is now asynchronous_.
